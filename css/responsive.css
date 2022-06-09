@@ -1,0 +1,51 @@
+/* Page Responsive Customize Code */
+
+
+@media all and (min-width: 576px) {}
+
+@media all and (max-width: 575px) {
+    .submit-card-section .submit-box {
+        border-radius: 20px 20px 20px 20px;
+    }
+}
+
+
+@media all and (min-width: 992px) {
+    .submit-card-section .submit-box1 {
+        border-radius: 30px 0px 0px 30px;
+    }
+
+    .submit-card-section .submit-box4 {
+        border-radius: 0px 30px 30px 0px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+    .submit-card-section .submit-box1 {
+        border-radius: 30px 0px 0px 0px;
+    }
+
+    .submit-card-section .submit-box2 {
+        border-radius: 0px 30px 0px 0px;
+    }
+
+    .submit-card-section .submit-box3 {
+        border-radius: 0px 0px 0px 30px;
+    }
+
+    .submit-card-section .submit-box4 {
+        border-radius: 0px 0px 30px 0px;
+    }
+
+    .submit-card-section .submit-box .about-box {
+        padding: 10px 5px;
+    }
+
+
+}
+
+@media all and (min-width: 1199px) {
+    .submit-card-section .submit-box .about-box {
+        padding: 12px 5px;
+    }
+}
