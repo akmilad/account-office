@@ -42,7 +42,6 @@ html {
 }
 
 body {
-  color: #8a8a8a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Noto Serif Bengali', serif;
@@ -58,7 +57,7 @@ body {
   --white: #ffffff;
   --grey-light: #f2f7f9;
   --grey: #d72924;
-  --black: #080808;
+  --black: #000;
   --black-blue: #1f2029;
   --black-blue-light: #353746;
   --black-blue-light-2: #404255;
@@ -76,12 +75,17 @@ a {
   transition: all ease 500ms;
 }
 
-h2 {
+.hd-title {
   color: var(--primary-color);
 }
 
-p {
+.designation {
   color: var(--paragraph-color);
+}
+
+/* Colors */
+.primary-tx-color {
+  color: var(--primary-color);
 }
 
 /* Global styles */
@@ -174,6 +178,128 @@ p {
 
 /* Headline section End */
 
+
+/* submit-card-section start */
+.submit-card-section .submit-box {
+  background-color: var(--white);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 2px 31px #9f9f9f;
+  /* height: 85vh; */
+}
+
+.submit-card-section .box-icon {
+  margin: auto;
+  width: 80%;
+  border: 1px solid var(--primary-color);
+  border-radius: 100%;
+  padding: 24px;
+
+}
+
+.submit-card-section .box-icon img {
+  width: 100%;
+}
+
+.submit-card-section .submit-box .line-gap {
+  width: 1px;
+  height: 20px;
+  background-color: #E2E6E7;
+  margin: auto;
+  position: relative;
+}
+
+.submit-card-section .submit-box .line-gap::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  bottom: -14px;
+  border: 1px solid #E2E6E7;
+  border-radius: 100%;
+  left: -6px;
+}
+
+.submit-card-section .submit-box button[type=submit] {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: 1.5px solid var(--primary-color);
+  font-size: 16px;
+  padding: 8px 50px;
+  border-radius: 18px;
+  transition: all .3s ease-in-out;
+}
+
+.submit-card-section .submit-box button[type=submit]:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+
+}
+
+.submit-card-section .visitor {}
+
+.submit-card-section .visitor span {
+  font-size: 12px;
+}
+
+.submit-card-section .submit-box .about-box {
+  text-decoration: none;
+  padding: 5px;
+  box-shadow: 0px 0px 10px #ddd;
+  height: 24%;
+}
+
+.submit-card-section .submit-box .about-box .picture {
+  width: 40%;
+}
+
+.submit-card-section .submit-box .about-box .picture img {
+  width: 100%;
+}
+
+.submit-card-section .submit-box .about-box:hover {
+  background-color: var(--secondery-color);
+}
+
+/* submit-card-section End */
+
+
+/* Notice Section start  */
+
+.notice {
+  background-color: #cce8ff;
+}
+
+.notice .notice-box ul {
+  list-style: none;
+}
+
+.notice .notice-box ul li {
+  background-color: var(--white);
+  margin-top: 10px;
+  font-size: 18px;
+  padding: 10px 0px;
+}
+
+.notice .notice-box ul li a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.notice .notice-box ul li a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.notice .notice-box .data-field form {
+  border: 1px solid #000;
+}
+
+.notice .notice-box .data-field input {
+  border: 1px solid #000;
+}
+
+/* Notice Section start  */
 
 
 
