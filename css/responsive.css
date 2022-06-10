@@ -1,7 +1,15 @@
 /* Page Responsive Customize Code */
 
 
-@media all and (min-width: 576px) {}
+@media all and (min-width: 576px) {
+    .sideBar .barItems .item:hover {
+        width: 44px;
+    }
+
+    .sideBar .barItems .item:hover i {
+        padding-left: 12px;
+    }
+}
 
 @media all and (max-width: 575px) {
     .submit-card-section .submit-box {
@@ -15,6 +23,19 @@
     .slider .img-tag p {
         padding: 4px;
         font-size: 10px;
+    }
+
+    .sideBar {
+        width: 100%;
+    }
+
+    .sideBar .barItems {
+        display: flex;
+    }
+
+    .sideBar .barItems .item {
+        width: 25%;
+        text-align: center;
     }
 }
 

@@ -36,6 +36,7 @@ html {
   -moz-scroll-behavior: inherit;
   -ms-scroll-behavior: inherit;
   -o-scroll-behavior: inherit;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -397,13 +398,122 @@ a {
 
 
 /* footer Section */
+.footer .footer-desc .visit {
+  font-size: 30px;
+}
+
 .footer .social-media-footer {
   display: flex;
   justify-content: center;
 }
 
+.footer .social-media-footer .tag {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.footer .social-media-footer .icons {
+  padding-left: 12px;
+}
+
+.footer .social-media-footer .icons i {
+  height: 30px;
+  width: 30px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  padding: 6px 2px;
+  color: #111;
+}
+
 /* footer Section */
 
+
+/* sideBar */
+.sideBar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.sideBar .barItems .item {
+  height: 35px;
+  width: 35px;
+  background-color: blue;
+  transition: all .3s ease-in-out;
+}
+
+.sideBar .barItems .item.fb {
+  background-color: rgb(59, 89, 152);
+}
+
+.sideBar .barItems .item.twt {
+  background-color: rgb(29, 161, 242);
+}
+
+.sideBar .barItems .item.mail {
+  background-color: rgb(219, 68, 55);
+}
+
+.sideBar .barItems .item.print {
+  background-color: rgb(115, 138, 141);
+}
+
+.sideBar .barItems .item i {
+  font-size: 20px;
+  padding: 7px;
+  color: var(--white);
+  transition: all .3s ease-in-out;
+}
+
+/*Left sideBar */
+
+
+/* Right rightBarBtn */
+.rightBarBtn {
+  position: fixed;
+  top: 20%;
+  right: -153px;
+  transition: all .5s ease-in-out;
+  z-index: 9999;
+}
+
+.rightBarBtn:hover {
+  right: 0;
+}
+
+.rightBarBtn a {
+  text-decoration: none;
+}
+
+.rightBarBtn .barBtn {
+  background-color: var(--primary-color);
+  padding: 6px 10px;
+  border-radius: 50px 0px 0px 50px;
+  align-items: center;
+}
+
+.rightBarBtn .barBtn .icon {
+  width: 35px;
+  height: 35px;
+  background: #ff8100fa;
+  border-radius: 100%;
+  padding: 7px 9px;
+}
+
+.rightBarBtn .barBtn i {
+  color: var(--white);
+}
+
+.rightBarBtn .barBtn .tag {
+  padding-left: 10px;
+}
+
+.rightBarBtn .barBtn .tag p {
+  color: var(--white);
+  margin: 0;
+  font-size: 1.1rem;
+}
 
 
 

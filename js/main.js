@@ -57,85 +57,6 @@ $(function ($) {
         }
     });
 
-    /* ----------------------------------------------------------- */
-    /*  index search
-    /* ----------------------------------------------------------- */
-
-    if ($(".header-search").length > 0) {
-        var todg = true;
-        $(".header-search >a").on("click", function (e) {
-            e.preventDefault();
-            if (todg) {
-                $(".header-search-form").fadeIn("slow");
-                todg = false;
-            } else {
-                $(".header-search-form").fadeOut("slow");
-                todg = true;
-            }
-        });
-
-        $(document).on('mouseup', function (e) {
-            var container = $(".header-search");
-
-            if (!container.is(e.target) && container.has(e.target).length === 0) {
-                $(".header-search-form").fadeOut("slow");
-                todg = true;
-            }
-
-        });
-    }
-
-
-    /*========================
-         navigation
-    ==========================*/
-    if ($('.ts-main-menu').length > 0) {
-        $(".ts-main-menu").navigation({
-            effect: "fade",
-            mobileBreakpoint: 992,
-        });
-    }
-
-    /*========================
-        breaking news
-   ==========================*/
-    if ($('#breaking_slider').length > 0) {
-        $('#breaking_slider').owlCarousel({
-            items: 1,
-            loop: true,
-            dots: false,
-            nav: true,
-            animateOut: 'slideOutDown',
-            animateIn: 'flipInX',
-            autoplayTimeout: 4000,
-            autoplay: true,
-            autoplayHoverPause: true,
-            mouseDrag: false,
-            touchDrag: false
-        })
-    }
-
-    if ($('#featured-slider-photo').length > 0) {
-        $('#featured-slider-photo').owlCarousel({
-            loop: true,
-            items: 1,
-            dots: false,
-            nav: true,
-            autoplayTimeout: 4000,
-            slideSpeed: 10000,
-            autoplay: true,
-            animateOut: 'fadeOut',
-            autoplayHoverPause: true,
-            mouseDrag: false,
-            touchDrag: false,
-            responsiveClass: true,
-            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
-        });
-    }
-    /*========================
-
-   ==========================*/
-
 
 
     var pageWidth = document.documentElement.clientWidth;
@@ -147,7 +68,7 @@ $(function ($) {
                 dots: true,
                 loop: true,
                 nav: false,
-                autoplay: false,
+                autoplay: true,
                 autoplayHoverPause: true,
                 mouseDrag: true,
                 touchDrag: false,
@@ -186,7 +107,7 @@ $(function ($) {
                 dots: true,
                 loop: true,
                 nav: false,
-                autoplay: false,
+                autoplay: true,
                 autoplayHoverPause: true,
                 mouseDrag: false,
                 touchDrag: true,
@@ -217,36 +138,12 @@ $(function ($) {
     }
 
 
-
-
-    /*  breking news slider
-    /* ----------------------------------------------------------- */
-    if ($('#breaking_slider1').length > 0) {
-        $('#breaking_slider1').slick({
-            speed: 10000,
-            autoplay: true,
-            autoplaySpeed: 0,
-            centerMode: true,
-            cssEase: 'linear',
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            variableWidth: true,
-            infinite: true,
-            initialSlide: 1,
-            arrows: false,
-            draggable: true,
-            buttons: false,
-            pauseOnHover: true
-        });
-    }
-
-
 });
 
 
 
 
-
+//Scroll back to top
 (function ($) {
     "use strict";
 
@@ -303,7 +200,7 @@ $(function ($) {
 
 })(jQuery);
 
-
+//Scroll back to top
 
 
 
@@ -377,3 +274,52 @@ floating_btn.addEventListener('click', () => {
 close_btn.addEventListener('click', () => {
     social_panel_container.classList.remove('visible')
 });
+
+
+
+
+// SideBar Click to Open Window
+
+// Facebook Open
+var newWin;
+function Popup() {
+    newWin = window.open('https://web.facebook.com/', 'Facebook', 'width=800', 'height=500');
+    document.onmousedown = focusPopup;
+    document.onkeyup = focusPopup;
+    document.onmousemove = focusPopup;
+}
+function focusPopup() {
+    if (!newWin.closed) {
+        newWin.focus();
+    }
+}
+
+// Twitter Open
+var newWin;
+function Popuptwt() {
+    newWin = window.open('https://twitter.com/home', 'Facebook', 'width=800', 'height=500');
+    document.onmousedown = focusPopup;
+    document.onkeyup = focusPopup;
+    document.onmousemove = focusPopup;
+}
+function focusPopup() {
+    if (!newWin.closed) {
+        newWin.focus();
+    }
+}
+
+// Mail Open
+var newWin;
+function PopupMail() {
+    newWin = window.open('https://mail.google.com/mail/u/0/#inbox', 'Facebook', 'width=800', 'height=500');
+    document.onmousedown = focusPopup;
+    document.onkeyup = focusPopup;
+    document.onmousemove = focusPopup;
+}
+function focusPopup() {
+    if (!newWin.closed) {
+        newWin.focus();
+    }
+}
+
+// SideBar Click to Open Window
