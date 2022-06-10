@@ -115,24 +115,6 @@ $(function ($) {
         })
     }
 
-    if ($('#featured-slider-visit').length > 0) {
-        $('#featured-slider-visit').owlCarousel({
-            loop: true,
-            items: 1,
-            dots: false,
-            nav: true,
-            // autoplayTimeout: 5000,
-            slideSpeed: 10000,
-            // autoplay: true,
-            // animateOut: 'slideOutRight',
-            autoplayHoverPause: true,
-            mouseDrag: false,
-            touchDrag: false,
-            responsiveClass: true,
-            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
-        });
-    }
-
     if ($('#featured-slider-photo').length > 0) {
         $('#featured-slider-photo').owlCarousel({
             loop: true,
@@ -153,37 +135,87 @@ $(function ($) {
     /*========================
 
    ==========================*/
-    if ($('.four-slide-section').length > 0) {
-        $('.four-slide-section').owlCarousel({
-            items: 3,
-            dots: false,
-            loop: true,
-            nav: true,
-            autoplayHoverPause: true,
-            mouseDrag: false,
-            touchDrag: false,
-            margin: 30,
-            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-            responsive: {
-                // breakpoint from 0 up
-                0: {
-                    items: 1,
-                },
-                // breakpoint from 480 up
-                480: {
-                    items: 2,
-                },
-                // breakpoint from 768 up
-                768: {
-                    items: 2,
-                },
-                // breakpoint from 768 up
-                1200: {
-                    items: 4,
+
+
+
+    var pageWidth = document.documentElement.clientWidth;
+
+    if (pageWidth > 768) {
+        if ($('.MinistriLink').length > 0) {
+            $('.MinistriLink').owlCarousel({
+                items: 3,
+                dots: true,
+                loop: true,
+                nav: false,
+                autoplay: false,
+                autoplayHoverPause: true,
+                mouseDrag: true,
+                touchDrag: false,
+                margin: 15,
+                navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+                responsive: {
+                    // breakpoint from 0 up
+                    0: {
+                        items: 2,
+                    },
+                    // breakpoint from 480 up
+                    480: {
+                        items: 2,
+                    },
+                    // breakpoint from 768 up
+                    768: {
+                        items: 4,
+                    },
+                    // breakpoint from 768 up
+                    1200: {
+                        items: 6,
+                    }
                 }
-            }
-        });
+            });
+        }
+
+
     }
+
+    var pageWidth = document.documentElement.clientWidth;
+
+    if (pageWidth < 576) {
+        if ($('.MinistriLink').length > 0) {
+            $('.MinistriLink').owlCarousel({
+                items: 3,
+                dots: true,
+                loop: true,
+                nav: false,
+                autoplay: false,
+                autoplayHoverPause: true,
+                mouseDrag: false,
+                touchDrag: true,
+                margin: 15,
+                navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+                responsive: {
+                    // breakpoint from 0 up
+                    0: {
+                        items: 2,
+                    },
+                    // breakpoint from 480 up
+                    480: {
+                        items: 2,
+                    },
+                    // breakpoint from 768 up
+                    768: {
+                        items: 4,
+                    },
+                    // breakpoint from 768 up
+                    1200: {
+                        items: 6,
+                    }
+                }
+            });
+        }
+
+
+    }
+
 
 
 
@@ -207,36 +239,6 @@ $(function ($) {
             pauseOnHover: true
         });
     }
-
-
-
-    if ($("#video-tab-scrollbar").length > 0) {
-        $("#video-tab-scrollbar").mCustomScrollbar({
-            mouseWheel: true,
-            scrollButtons: { enable: true }
-        });
-    }
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 50) {
-            $('#back-to-top').fadeIn();
-        } else {
-            $('#back-to-top').fadeOut();
-        }
-    });
-
-    // scroll body to 0px on click
-    $('#back-to-top').on('click', function () {
-        $('#back-to-top').tooltip('hide');
-        $('body,html').animate({
-            scrollTop: 0
-        }, 800);
-        return false;
-    });
-
-    $('#back-to-top').tooltip('hide');
-
-
 
 
 });
@@ -343,3 +345,35 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
     captionText.innerHTML = dots[slideIndex - 1].alt;
 }
+
+
+
+
+
+
+const countEl = document.getElementById('count');
+
+updateVisitCount();
+
+function updateVisitCount() {
+    fetch('https://api.countapi.xyz/update/florin-popcom/codepen/?amount=1')
+        .then(res => res.json())
+        .then(res => {
+            countEl.innerHTML = res.value;
+        })
+}
+
+
+
+// SOCIAL PANEL JS
+const floating_btn = document.querySelector('.floating-btn');
+const close_btn = document.querySelector('.close-btn');
+const social_panel_container = document.querySelector('.social-panel-container');
+
+floating_btn.addEventListener('click', () => {
+    social_panel_container.classList.toggle('visible')
+});
+
+close_btn.addEventListener('click', () => {
+    social_panel_container.classList.remove('visible')
+});
