@@ -18,6 +18,21 @@
 
 */
 
+
+// PopUp Box
+var popup = document.getElementById("popUpArea");
+
+function opnePopup() {
+    popup.classList.add("openPopup");
+}
+function closePopup() {
+    popup.classList.remove("openPopup");
+}
+// PopUp Box
+
+
+
+
 $(function ($) {
     "use strict";
 
@@ -283,7 +298,7 @@ close_btn.addEventListener('click', () => {
 // Facebook Open
 var newWin;
 function Popup() {
-    newWin = window.open('https://web.facebook.com/', 'Facebook', 'width=800', 'height=500');
+    newWin = window.open('https://www.facebook.com/', 'Facebook', 'width=800', 'height=500');
     document.onmousedown = focusPopup;
     document.onkeyup = focusPopup;
     document.onmousemove = focusPopup;
@@ -323,3 +338,4 @@ function focusPopup() {
 }
 
 // SideBar Click to Open Window
+

@@ -162,6 +162,10 @@ a {
 
 }
 
+.headline .notice-slide-2 {
+  background-color: var(--green);
+}
+
 .headline .marquee {
   background-color: var(--green);
   color: var(--white);
@@ -269,7 +273,7 @@ a {
   background-color: var(--white);
   margin-top: 10px;
   font-size: 18px;
-  padding: 10px 0px;
+  padding: 10.8px 0px;
   box-shadow: 1px 0px 13px 0px rgba(0, 0, 0, .2);
 }
 
@@ -476,6 +480,7 @@ a {
   right: -153px;
   transition: all .5s ease-in-out;
   z-index: 9999;
+  cursor: pointer;
 }
 
 .rightBarBtn:hover {
@@ -515,6 +520,68 @@ a {
   font-size: 1.1rem;
 }
 
+/* Right rightBarBtn */
+
+
+/* PopUp Area */
+.popUpArea {
+  background-color: rgba(0, 0, 0, .2);
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 999999;
+  display: none;
+
+}
+
+.popUpArea.openPopup {
+  display: block;
+}
+
+.popUpArea .popUpBox {
+  position: absolute;
+  /* top: 50%;
+  left: 50%; */
+  background-color: var(--white);
+  width: 500px;
+  padding: 50px 40px;
+  border-radius: 8px;
+  transition: transform .4s ease-in-out;
+  visibility: hidden;
+}
+
+.popUpArea.openPopup .popUpBox {
+  animation: popup .3s ease-in-out 1;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(.2);
+  }
+
+  80% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+    visibility: visible;
+  }
+}
+
+.popUpArea .popUpBox button {
+  background-color: var(--primary-color);
+  outline: none;
+  color: var(--white);
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+}
+
+/* PopUp Area */
 
 
 /* Top Scroll Progress */
